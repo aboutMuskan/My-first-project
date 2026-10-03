@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Algorithm Visualizer</h1>
+    </header>
+
+    <section class="controls">
+
+        <button id="generate">Generate Array</button>
+
+        <label>Array Size</label>
+        <input type="range" id="size" min="10" max="80" value="30">
+
+        <label>Speed</label>
+        <input type="range" id="speed" min="1" max="200" value="50">
+
+        <button id="bubble">Bubble Sort</button>
+
+        <button id="selection">Selection Sort</button>
+
+        <button id="insertion">Insertion Sort</button>
+
+        <button id="merge">Merge Sort</button>
+
+        <button id="quick">Quick Sort</button>
+
+    </section>
+
+    <div class="main-container">
+
+        <div class="side-panel">
+
+            <div class="card">
+                <h3>COMPLEXITY</h3>
+
+                <h2>Bubble Sort</h2>
+
+                <p>Time (avg): O(n²)</p>
+                <p>Time (worst): O(n²)</p>
+                <p>Space: O(1)</p>
+                <p>Stable: Yes ✓</p>
+                <p>In-place: Yes ✓</p>
+            </div>
+
+            <div class="card">
+                <h3>LIVE STATS</h3>
+
+                <p>Comparisons:
+                    <span id="comparisons">0</span>
+                </p>
+
+                <p>Swaps:
+                    <span id="swaps">0</span>
+                </p>
+
+                <p>Array Size:
+                    <span id="arraySize">0</span>
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>LEGEND</h3>
+
+                <p>🔵 Default</p>
+                <p>🔴 Comparing</p>
+                <p>🟡 Swapping</p>
+                <p>🟣 Pivot</p>
+                <p>🟢 Sorted</p>
+            </div>
+
+        </div>
+
+        <div id="array-container"></div>
+
+    </div>
+
+    <script src="utils/sleep.js"></script>
+    <script src="utils/swap.js"></script>
+    <script src="utils/barUtils.js"></script>
+
+    <script src="algorithms/bubble.js"></script>
+    <script src="algorithms/selection.js"></script>
+    <script src="algorithms/insertion.js"></script>
+    <script src="algorithms/merge.js"></script>
+    <script src="algorithms/quick.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
